@@ -23,10 +23,12 @@ header p {
 	line-height: 1.5;
 }
 
+
 /* Estilos de los apartados */
 section {
 	background-color: #f2f2f2;
 	padding: 80px 0;
+	text-align: center;
 }
 
 section h2 {
@@ -39,6 +41,11 @@ section p {
 	font-size: 1.5rem;
 	margin-bottom: 48px;
 	line-height: 1.5;
+}
+
+section:nth-of-type(2) {
+	background-color: #121212;
+	color: #fff;
 }
 
 /* Estilos del pie de página */
@@ -64,6 +71,65 @@ body {
 	margin: 0 auto;
 	padding: 0 24px;
 }
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 250px;
+  margin: 20px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+form input {
+	margin-bottom: 10px;
+}
+
+form select {
+	margin-bottom: 10px;
+}
+
+#solicitud-form {
+  border: 2px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.btn-submit {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 10px 0;
+  border: 1px solid #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-submit:hover {
+  background-color: #fff;
+  color: #121212;
+  border: 1px solid #121212;
+}
     </style>
 </head>
 <body>
@@ -82,8 +148,71 @@ body {
 		<p>La inteligencia artificial puede ayudar a mejorar una landing page de varias maneras, como la personalización de contenido para el usuario, la automatización de procesos y la mejora del análisis de datos.</p>
 	</section>
 
+	<section>
+		<h2>El peor equipo de LoL del mundo</h2>
+		<p>Somos el peor equipo de LoL del mundo y estamos orgullosos de eso. Jugamos sólo ARAM porque las partidas largas nos aburren. Nuestra única regla es jugar por las estadísticas. No jugamos en equipo. Cuanto más daño hagamos mejor. Y, por supuesto, no ganamos casi nunca. Eso sí, las risas no faltan. Ni las lágrimas.</p>
+	</section>
+
+	<section>
+		<h2>¿Quiénes somos?</h2>
+		<div class="card-container">
+		  <div class="card">
+			<img src="https://placekitten.com/200/200" alt="Miembro del equipo 1">
+			<p>Pandhax</p>
+		  </div>
+		  <div class="card">
+			<img src="https://placekitten.com/200/200" alt="Miembro del equipo 2">
+			<p>Jhonny Gankeo</p>
+		  </div>
+		  <div class="card">
+			<img src="https://placekitten.com/200/200" alt="Miembro del equipo 3">
+			<p>Licha</p>
+		  </div>
+		  <div class="card">
+			<img src="https://placekitten.com/200/200" alt="Miembro del equipo 4">
+			<p>Ianchu</p>
+		  </div>
+		  <div class="card">
+			<img src="https://placekitten.com/200/200" alt="Miembro del equipo 5">
+			<p>Ornela</p>
+		  </div>
+		</div>
+	  </section>
+
+	  <section id="solicitud">
+		<h2>Solicitud de membresía</h2>
+		<p>Si desea pertenecer a este increíble grupo de personas, no dude en enviar su solicitud.</p>
+		<form id="solicitud-form">
+			<div>
+				<label for="nick">Nick de la cuenta:</label>
+				<input type="text" id="nick" name="nick">
+			</div>
+			<div>
+				<label for="rango">Rango:</label>
+				<select id="rango" name="rango">
+				  <option value="Hierro">Hierro</option>
+				  <option value="Bronce">Bronce</option>
+				  <option value="Plata">Plata</option>
+				  <option value="Oro">Oro</option>
+				  <option value="Platino">Platino</option>
+				  <option value="Diamante">Diamante</option>
+				  <option value="Maestro">Maestro</option>
+				  <option value="Maestro">Gran Maestro</option>
+				  <option value="Maestro">Retador</option>
+				</select>
+			</div>
+			<div>
+				<label for="roles">Rol habitual:</label>
+				<input type="text" id="roles" name="roles">
+			</div>
+			<div>
+				<button class="btn-submit">Enviar</button>
+			</div>
+		</form>
+	</section>
+
 	<footer>
-		<p>Copyright © 2023</p>
+		<p>Derechos de autor © 2023</p>
 	</footer>
 </body>
 </html>
